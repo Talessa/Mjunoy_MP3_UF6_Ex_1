@@ -3,12 +3,16 @@
     package="com.talessa.mjunoy_mp3_uf6_ex_1">
 
     <application
+        android:name=".RealmApplication"
         android:allowBackup="true"
         android:icon="@mipmap/ic_launcher"
         android:label="@string/app_name"
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
+        <activity android:name=".VerGeneroActivity"></activity>
+        <activity android:name=".VerEdadActivity" />
+        <activity android:name=".VerRangoActivity" />
         <activity android:name=".InicioActivity">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
@@ -16,6 +20,12 @@
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
+        <activity android:name=".ListaActivity" />
+        <activity android:name=".AnadirActivity" />
+        <activity android:name=".VerListaActivity" />
+        <activity android:name=".RangoEdadActivity" />
+        <activity android:name=".EdadActivity" />
+        <activity android:name=".GeneroActivity" />
     </application>
 
 </manifest>

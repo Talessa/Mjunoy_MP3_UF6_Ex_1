@@ -6,7 +6,7 @@ import io.realm.annotations.PrimaryKey;
 public class Persona extends RealmObject {
 
     @PrimaryKey
-    int id;
+    long id;
 
     String nombre;
     String apellidos;
@@ -14,11 +14,11 @@ public class Persona extends RealmObject {
     String genero;
     String email;
 
-    public int getid() {
+    public long getid() {
         return id;
     }
 
-    public void setid(int id) {
+    public void setid(long id) {
         this.id = id;
     }
 
