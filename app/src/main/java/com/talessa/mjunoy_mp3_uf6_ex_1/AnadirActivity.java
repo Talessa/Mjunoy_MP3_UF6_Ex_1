@@ -4,6 +4,7 @@ import android.content.Intent;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.view.View;
+import android.widget.CheckBox;
 import android.widget.EditText;
 import android.widget.Toast;
 
@@ -25,7 +26,8 @@ public class AnadirActivity extends AppCompatActivity {
         final EditText nombreEdit = findViewById(R.id.nombre);
         final EditText apellidosEdit = findViewById(R.id.apellidos);
         final EditText edadEdit = findViewById(R.id.edad);
-        final EditText generoEdit = findViewById(R.id.genero);
+        final CheckBox hombre= findViewById(R.id.hombre);
+        final CheckBox mujer = findViewById(R.id.mujer);
         final EditText emailEdit = findViewById(R.id.email);
 
 
@@ -35,15 +37,22 @@ public class AnadirActivity extends AppCompatActivity {
                 String nombre = nombreEdit.getText().toString().trim();
                 String apellidos = apellidosEdit.getText().toString().trim();
                 String edad = edadEdit.getText().toString().trim();
-                String genero = generoEdit.getText().toString().trim();
                 String email = emailEdit.getText().toString().trim();
 
                 if (nombre.length() > 0
                         && apellidos.length() > 0
                         && edad.length() > 0
-                        && genero.length() > 0
                         && email.length() > 0){
-                       crearpersona(nombre,apellidos,edad,genero,email);
+                    if (hombre.isChecked()) {
+                        String genero = "hombre";
+                        crearpersona(nombre, apellidos, edad, genero, email);
+                    }else if (mujer.isChecked()) {
+                        String genero = "mujer";
+                        crearpersona(nombre, apellidos, edad, genero, email);
+                    }else {
+                        String genero = "sin definir";
+                        crearpersona(nombre, apellidos, edad, genero, email);
+                    }
                 }else {
                     Toast.makeText(AnadirActivity.this,
                             "Debe rellenar todos los campos",

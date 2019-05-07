@@ -20,10 +20,10 @@ public class GeneroActivity extends AppCompatActivity {
             @Override
             public void onClick(View v) {
                 Intent intent = new Intent(GeneroActivity.this,VerGeneroActivity.class);
-                if (hombre.isActivated()){
+                if (hombre.isChecked()){
                     intent.putExtra("opcion","hombre");
                     startActivity(intent);
-                }else if (mujer.isActivated()){
+                }else if (mujer.isChecked()){
                     intent.putExtra("opcion","mujer");
                     startActivity(intent);
                 }else {

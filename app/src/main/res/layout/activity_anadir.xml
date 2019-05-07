@@ -10,7 +10,6 @@
         android:layout_width="match_parent"
         android:layout_height="match_parent">
         <LinearLayout
-            xmlns:android="http://schemas.android.com/apk/res/android"
             android:layout_width="match_parent"
             android:layout_height="match_parent"
             android:orientation="vertical"
@@ -84,13 +83,22 @@
                     android:textSize="16sp"
                     android:textStyle="bold"
                     android:layout_margin="8dp"/>
-                <EditText
-                    android:id="@+id/genero"
+
+                <CheckBox
+                    android:id="@+id/hombre"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:hint="Hombre/Mujer"
-                    android:textSize="14sp"
-                    android:inputType="text"/>
+                    android:layout_weight="1"
+                    android:text="Hombre"
+                    android:layout_margin="8dp"/>
+
+                <CheckBox
+                    android:id="@+id/mujer"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:text="Mujer"
+                    android:layout_margin="8dp"/>
             </LinearLayout>
             <LinearLayout
                 android:layout_width="wrap_content"

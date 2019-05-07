@@ -27,12 +27,12 @@ public class EdadActivity extends AppCompatActivity {
 
                String edad = edadI.getText().toString().trim();
                if(edad.length() > 0) {
-                   if (mayor.isActivated()) {
+                   if (mayor.isChecked()) {
                        Intent intent = new Intent(EdadActivity.this,VerEdadActivity.class);
                        intent.putExtra("opcion","mayor");
                        intent.putExtra("edad",edad);
                        startActivity(intent);
-                   } else if (menor.isActivated()) {
+                   } else if (menor.isChecked()) {
                        Intent intent = new Intent(EdadActivity.this,VerEdadActivity.class);
                        intent.putExtra("opcion","menor");
                        intent.putExtra("edad",edad);

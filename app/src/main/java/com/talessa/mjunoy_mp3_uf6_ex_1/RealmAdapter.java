@@ -3,6 +3,7 @@ package com.talessa.mjunoy_mp3_uf6_ex_1;
 import android.app.AlertDialog;
 import android.content.Context;
 import android.content.DialogInterface;
+import android.content.Intent;
 import android.support.v7.widget.AlertDialogLayout;
 import android.support.v7.widget.CardView;
 import android.view.LayoutInflater;
@@ -66,7 +67,8 @@ public class RealmAdapter extends BaseAdapter {
 
         viewHolder.nombre.setText(personas.get(position).getNombre());
         viewHolder.apellidos.setText(personas.get(position).getApellidos());
-        viewHolder.edad.setText(personas.get(position).getEdad());
+        String ed1= String.valueOf(personas.get(position).getEdad());
+        viewHolder.edad.setText(ed1);
         viewHolder.genero.setText(personas.get(position).getGenero());
         viewHolder.email.setText(personas.get(position).getEmail());
 
@@ -89,6 +91,7 @@ public class RealmAdapter extends BaseAdapter {
     }
 
     private void editar(final Persona persona) {
+
         AlertDialog.Builder builder= new AlertDialog.Builder(context);
         builder.setTitle("Edita la persona:");
         View viewI = LayoutInflater.from(context).inflate(R.layout.modificar_persona,null);
@@ -102,7 +105,8 @@ public class RealmAdapter extends BaseAdapter {
 
         nombre.setText(persona.getNombre());
         apellidos.setText(persona.getApellidos());
-        edad.setText(persona.getEdad());
+        String ed1= String.valueOf(persona.getEdad());
+        edad.setText(ed1);
         genero.setText(persona.getGenero());
         email.setText(persona.getEmail());
 
