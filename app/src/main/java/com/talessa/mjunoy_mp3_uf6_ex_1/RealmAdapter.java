@@ -65,8 +65,8 @@ public class RealmAdapter extends BaseAdapter {
             viewHolder =(ViewHolder) view.getTag();
         }
 
-        viewHolder.nombre.setText(personas.get(position).getNombre());
-        viewHolder.apellidos.setText(personas.get(position).getApellidos());
+//        viewHolder.nombre.setText(personas.get(position).getNombre());
+//        viewHolder.apellidos.setText(personas.get(position).getApellidos());
         String ed1= String.valueOf(personas.get(position).getEdad());
         viewHolder.edad.setText(ed1);
         viewHolder.genero.setText(personas.get(position).getGenero());
@@ -103,8 +103,8 @@ public class RealmAdapter extends BaseAdapter {
         final EditText genero = viewI.findViewById(R.id.genero);
         final EditText email = viewI.findViewById(R.id.email);
 
-        nombre.setText(persona.getNombre());
-        apellidos.setText(persona.getApellidos());
+//        nombre.setText(persona.getNombre());
+//        apellidos.setText(persona.getApellidos());
         String ed1= String.valueOf(persona.getEdad());
         edad.setText(ed1);
         genero.setText(persona.getGenero());
@@ -127,8 +127,8 @@ public class RealmAdapter extends BaseAdapter {
                     //
                     Realm realm = Realm.getDefaultInstance();
                     realm.beginTransaction();
-                    persona.setNombre(nombreM);
-                    persona.setApellidos(apellidosM);
+//                    persona.setNombre(nombreM);
+//                    persona.setApellidos(apellidosM);
                     persona.setEdad(Integer.parseInt(edadM));
                     persona.setGenero(generoM);
                     persona.setEmail(emailM);

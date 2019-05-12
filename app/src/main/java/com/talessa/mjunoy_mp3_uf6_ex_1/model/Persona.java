@@ -2,17 +2,18 @@ package com.talessa.mjunoy_mp3_uf6_ex_1.model;
 
 import io.realm.RealmObject;
 import io.realm.annotations.PrimaryKey;
+import io.realm.annotations.Required;
 
 public class Persona extends RealmObject {
 
     @PrimaryKey
     long id;
-
-    String nombre;
-    String apellidos;
+    @Required
+    String nombrecompleto;
     int edad;
     String genero;
     String email;
+
 
     public long getid() {
         return id;
@@ -22,21 +23,22 @@ public class Persona extends RealmObject {
         this.id = id;
     }
 
-    public String getNombre() {
-        return nombre;
-    }
 
-    public void setNombre(String nombre) {
-        this.nombre = nombre;
-    }
-
-    public String getApellidos() {
-        return apellidos;
-    }
-
-    public void setApellidos(String apellidos) {
-        this.apellidos = apellidos;
-    }
+//    public String getNombre() {
+//        return nombre;
+//    }
+//
+//    public void setNombre(String nombre) {
+//        this.nombre = nombre;
+//    }
+//
+//    public String getApellidos() {
+//        return apellidos;
+//    }
+//
+//    public void setApellidos(String apellidos) {
+//        this.apellidos = apellidos;
+//    }
 
     public int getEdad() {
         return edad;

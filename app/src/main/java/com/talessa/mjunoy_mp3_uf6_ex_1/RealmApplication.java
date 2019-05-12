@@ -22,8 +22,8 @@ public class RealmApplication extends Application {
         RealmConfiguration config = new RealmConfiguration
                 .Builder()
                 .name("Mibdd.realm")
-                .schemaVersion(0)
-                .deleteRealmIfMigrationNeeded()
+                .schemaVersion(1)
+                .migration(new RealmMigration())
                 .build();
         Realm.setDefaultConfiguration(config);
     }

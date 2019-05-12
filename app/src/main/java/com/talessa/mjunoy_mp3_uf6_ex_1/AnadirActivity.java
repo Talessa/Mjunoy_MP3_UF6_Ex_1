@@ -72,8 +72,8 @@ public class AnadirActivity extends AppCompatActivity {
         realm.beginTransaction();
         Persona persona = new Persona();
         persona.setid(id);
-        persona.setNombre(nombre);
-        persona.setApellidos(apellidos);
+//        persona.setNombre(nombre);
+//        persona.setApellidos(apellidos);
         persona.setEdad(edadN);
         persona.setGenero(genero);
         persona.setEmail(email);
