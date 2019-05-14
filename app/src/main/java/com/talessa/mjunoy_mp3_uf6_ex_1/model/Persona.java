@@ -10,6 +10,8 @@ public class Persona extends RealmObject {
     long id;
     @Required
     String nombrecompleto;
+//    String nombre;
+//    String apellidos;
     int edad;
     String genero;
     String email;
@@ -39,6 +41,16 @@ public class Persona extends RealmObject {
 //    public void setApellidos(String apellidos) {
 //        this.apellidos = apellidos;
 //    }
+
+
+    public String getNombrecompleto() {
+
+        return nombrecompleto;
+    }
+
+    public void setNombrecompleto(String nombrecompleto) {
+        this.nombrecompleto = nombrecompleto;
+    }
 
     public int getEdad() {
         return edad;

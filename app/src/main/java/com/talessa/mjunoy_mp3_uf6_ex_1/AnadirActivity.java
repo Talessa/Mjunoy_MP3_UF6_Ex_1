@@ -67,11 +67,13 @@ public class AnadirActivity extends AppCompatActivity {
     private void crearpersona(String nombre, String apellidos, String edad, String genero, String email) {
 
         int edadN = Integer.parseInt(edad);
+        String nombreC=nombre+" "+apellidos;
         long id = 1+System.currentTimeMillis();
 
         realm.beginTransaction();
         Persona persona = new Persona();
         persona.setid(id);
+        persona.setNombrecompleto(nombreC);
 //        persona.setNombre(nombre);
 //        persona.setApellidos(apellidos);
         persona.setEdad(edadN);
